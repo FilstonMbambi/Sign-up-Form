@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    overflow: auto;
+}
+
+#side-hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 60vw;
+    min-width: 345px;
+    height: 100vh;
+    background: url("background3.jpg") center;
+    background-size: cover;
+}
+
+#side-hero::before {
+    content: "";
+    background: rgb(27, 73, 73);
+    opacity: 60%;
+    width: 100%;
+    height: 100px;
+}
+
+#hero-head {
+    position: absolute;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    color:antiquewhite;
+    z-index: 1;
+}
+
+#hero-head img {
+    width: 50px;
+    border-radius: 15px;
+}
+
+#container {
+    position: relative;
+    background-color: rgb(209, 210, 210);
+    height: 100vh;
+    padding: auto;
+}
+
+#form-section {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+}
+
+#submit-section{
+    position: absolute;
+    bottom:6vh;
+    margin-left: 15px;
+}
+
+label {
+    text-transform: uppercase;
+    opacity: .7;
+    margin: 15px;
+}
+
+label #Email {
+    margin-left: 46px;
+}
+label #Password {
+    margin-left: 8px;
+}
+
+input:invalid {
+    border-color: rgb(244, 68, 68);
+}
+
+input:valid {
+    border-color: rgb(136, 244, 68);
+}
+
+input {
+    font-size: 16px;
+    font-weight: 300;
+    padding: 3px;
+}
+
+input:focus {
+    border:solid black;
+    background: rgb(212, 254, 150);
+
+}
+
+p {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+#head {
+    position: relative;
+    top: 3rem;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 20px;
+    margin: 20px;
+}
+
+button {
+    box-shadow: #000;
+    border: none;
+    border-radius: 18px;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 10px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    background: rgba(38, 29, 6, 0.736);
+}
+
+button:hover {
+    background: rgb(127, 125, 125);
+    cursor: pointer;
+}
+
+@media only screen and (max-width:1120px) {
+    #side-hero {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 30vh;
+    }
+
+    #container {
+        position: absolute;
+        top: 20vh;
+        background-color: rgb(209, 210, 210);
+        padding: auto;
+    }
+
+    #form-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    label {
+        width: 300px;
+        margin: 2px;
+    }
+
+    label #Email {
+        margin-left: 0;
+    }
+    label #Password {
+        margin-left: 0;
+    }
+
+    #Email {
+        display: block;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+}
